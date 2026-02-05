@@ -12,7 +12,6 @@ function App() {
   const [movieList,setMovieList] = useState("popular");
 
   const handleListChange = (list) => {
-    console.log(list);
     setMovieList(list);
   }
 
