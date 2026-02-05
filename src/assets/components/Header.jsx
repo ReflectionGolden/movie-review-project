@@ -4,7 +4,7 @@ import '../../App.css'
 
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 
-function Header() {
+function Header(props) {
     return (
         <div className='items-center justify-between px-5'>
             <div>
@@ -14,9 +14,9 @@ function Header() {
                 </p>
             </div>
             <nav className='flex items-left mx-auto my-5 w-fit'>
-                <a className='px-3' href="">Recent Movies</a>
+                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("popular")}>Popular Movies</button>
                 <p>|</p>
-                <a className='px-3' href="">Highly Rated</a>
+                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("top_rated")}>Highly Rated</button>
             </nav>
         </div>
     )
