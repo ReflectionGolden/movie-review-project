@@ -14,9 +14,11 @@ function Header(props) {
                 </p>
             </div>
             <nav className='flex items-left mx-auto my-5 w-fit'>
-                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("popular")}>Popular Movies</button>
+                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("popular", "Popular Movies")}>Popular Movies</button>
                 <p>|</p>
-                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("top_rated")}>Highly Rated</button>
+                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("top_rated", "Top Rated Movies")}>Highly Rated</button>
+                <p>|</p>
+                <button className='mx-3 px-1 bg-neutral-800 text-indigo-500 border border-orange-100 rounded hover:text-indigo-400 hover:bg-linear-to-b hover:from-neutral-600 hover:to-neutral-700 active:bg-linear-to-t' onClick={() => props.handleListChange("now_playing", "Now Playing Movies")}>Now Playing</button>
             </nav>
         </div>
     )
