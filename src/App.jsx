@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from './assets/components/Header.jsx';
 import MovieList from './assets/components/MovieList.jsx';
 import MovieCard from './assets/components/MovieCard.jsx';
-import './App.css'
-
+import './App.css';
 
 function App() {
   const [allMovies, setAllMovies] = useState([]);

@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../App.css'
+import FilterMovies from './FilterMovies';
+import '../../App.css';
 
 function MovieList(props) {
   return (
@@ -8,13 +8,7 @@ function MovieList(props) {
             <h2>{props.title}</h2>
         </header>
         <div className='flex items-center py-4'>
-            <ul className='flex justify-center items-center'>
-                <li className='px-3'>Rating:</li>
-                <li className={`px-3 cursor-pointer hover:text-indigo-400 ${props.minRating === 8 ? 'underline' : ''}`} onClick={() => props.handleMovieFilter(8)}>8+</li>
-                <li className={`px-3 cursor-pointer hover:text-indigo-400 ${props.minRating === 7 ? 'underline' : ''}`} onClick={() => props.handleMovieFilter(7)}>7+</li>
-                <li className={`px-3 cursor-pointer hover:text-indigo-400 ${props.minRating === 6 ? 'underline' : ''}`} onClick={() => props.handleMovieFilter(6)}>6+</li>
-                <li className={`px-3 cursor-pointer hover:text-indigo-400 ${props.minRating === 0 ? 'underline' : ''}`} onClick={() => props.handleMovieFilter(0)}>all</li>
-            </ul>
+            <FilterMovies handleMovieFilter={props.handleMovieFilter} ratings={[8,7,6,0]} minRating={props.minRating} />
             <select className='bg-neutral-800 outline outline-neutral-400 px-1 mx-1 rounded' name="sortTypeDrop" id="sortTypeDrop" onChange={props.handleSorting}>
                 <option disabled>Sort By</option>
                 <option value="default">Default</option>

@@ -1,6 +1,5 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../../App.css'
+import '../../App.css';
 
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 
