@@ -36,10 +36,7 @@ function App() {
       setMinRating(rating);
       filtered = allMovies.filter(movie => movie.vote_average >= rating);
     }
-
-    if (filtered.length != 0) {
-      setFilteredMovies(filtered);
-    }
+    setFilteredMovies(filtered);
   }
 
   const handleSorting = (event) => {

@@ -6,7 +6,7 @@ const FilterMovies = ({handleMovieFilter, ratings, minRating}) => {
         <ul className='flex justify-center items-center'>
             <li className='px-3'>Rating:</li>
             {ratings.map(rate => 
-                <li className={`px-3 cursor-pointer hover:text-indigo-400 ${minRating === rate ? 'underline' : ''}`} onClick={() => handleMovieFilter(rate)}>{rate === 0 ? "all" : rate.toString()+"+"}</li>
+                <li key={rate} className={`px-3 cursor-pointer hover:text-indigo-400 ${minRating === rate ? 'underline' : ''}`} onClick={() => handleMovieFilter(rate)}>{rate === 0 ? "all" : rate.toString()+"+"}</li>
             )}
         </ul>
     </>
