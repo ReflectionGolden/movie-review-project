@@ -104,8 +104,7 @@ function App() {
   return (
     <>
       <Header handleListChange={handleListChange} />
-      <h2>Temp Header</h2>
-      <p>Lorem ipsum</p>
+      <p>This application demonstrates the use of an API in order to get and display information, and the ability to filter and sort given data when displayed.</p>
       <MovieList title={listTitle} handleMovieFilter={handleMovieFilter} minRating={minRating} handleSorting={handleSorting}>
         {filteredMovies.length > 0 ? filteredMovies.map(movie => (
           <MovieCard key={movie.id} movie={movie} />
